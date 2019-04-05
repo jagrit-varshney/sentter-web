@@ -1,7 +1,6 @@
 #Importing Libraries
 from flask import Flask,render_template,request,url_for,redirect,session,jsonify
 from sklearn.externals import joblib
-import re
 import tweepy
 from tweepy import OAuthHandler
 
@@ -62,19 +61,13 @@ def index():
 					tweets.append(parsed_tweet)
 
 			length = len(tweets)
-			cleaned_tweets = []
-
-			for i in range(0, length):
-				cleaned_text =  ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|(https?://[A-Za-z0-9./]+)", " ", tweets[i]).split())
-				cleaned_tweets.append(cleaned_text)
-
 			results = []
 			ptweets = 0
 			ntweets = 0
 			answer = ''
 
 			for i in range(0, length):
-				tokenized = new_token.transform([cleaned_tweets[i]])
+				tokenized = new_token.transform([tweets[i]])
 				predictions = new_model.predict(tokenized)
 
 				res = predictions[0]

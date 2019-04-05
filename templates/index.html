@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sentter - Live Sentiment Analysis</title>
+
+    <!-- In-line CSS -->
+    <style>
+      body
+      {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: #c3d5e7;
+      }
+      .box
+      {
+        width: 600px;
+        padding: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #c3d5e7;
+        text-align: center;
+      }
+      .box h1
+      {
+        color: black;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .box input[type="text"]
+      {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #3498db;
+        padding: 14px 10px;
+        width: 200px;
+        outline: none;
+        color: black;
+        border-radius: 24px;
+        transition: 0.25s;
+      }
+      .box input[type="text"]:focus
+      {
+        width: 400px;
+        border-color: #2ecc71;
+      }
+      .box input[type="submit"] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #2ecc71;
+        padding: 14px 40px;
+        outline: none;
+        color: #83636b;
+        border-radius: 24px;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+      .box input[type="submit"]:hover
+      {
+        background: #2ecc71;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <form class="box" method="POST">
+      <h1>Sentter</h1>
+      <h4>Enter text in the fields.</h4>
+      <h5>To find the sentiment of any sentence, write the sentence in 1st input box</h5>
+      <h5>To find the sentiment of any query from Twitter, write the query in 2nd input box. By default, 25 tweets will be searched and re-tweets will be removed.</h5>
+      <input type="text" name="text" id="text" placeholder="Enter sentence here"/>
+      <input type="text" name="tquery" id="tquery" placeholder="Enter query here">
+      <input type="submit" id="submit" value="Submit" />
+      <p>{{ answer }}</p>
+    </form>
+  
+  </body>
+</html>

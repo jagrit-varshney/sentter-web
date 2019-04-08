@@ -5,6 +5,17 @@
 
     <!-- In-line CSS -->
     <style>
+    .footer
+      {
+        position: fixed;;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #000000
+        color: white;
+        text-align: center;
+      }
+      
       body
       {
         margin: 0;
@@ -76,12 +87,15 @@
       <h1>Sentter</h1>
       <h4>Enter text in the fields.</h4>
       <h5>To find the sentiment of any sentence, write the sentence in 1st input box</h5>
-      <h5>To find the sentiment of any query from Twitter, write the query in 2nd input box. By default, 25 tweets will be searched and re-tweets will be removed.</h5>
+      <h5>To find the sentiment of any query from Twitter, write the query in 2nd input box. By default, 100 tweets will be searched and re-tweets will be removed.</h5>
       <input type="text" name="text" id="text" placeholder="Enter sentence here"/>
       <input type="text" name="tquery" id="tquery" placeholder="Enter query here">
       <input type="submit" id="submit" value="Submit" />
       <p>{{ answer }}</p>
     </form>
-  
+    
+    <div class="footer">
+      <p>Copyright - 2019 All Rights Reserved - Jagrit Varshney</p>
+    </div>
   </body>
 </html>

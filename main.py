@@ -48,7 +48,7 @@ def index():
 
 			tweets = []
 
-			fetched_tweets = api.search(q = query_enter, lang='en', count = 25)
+			fetched_tweets = api.search(q = query_enter, lang='en', count = 100)
 
 			for tweet in fetched_tweets:
 				parsed_tweet = tweet.text

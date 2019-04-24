@@ -11,10 +11,11 @@ app=Flask(__name__)
 new_model = joblib.load('mlmodel.pkl')
 new_token = joblib.load('tfidf.pkl')
 
-consumer_key = "QNQZHNNo6RivPNd2pqPxCQajt"
-consumer_secret = "kaxsk0dJsWWw05uxKwDtK5WMT9PblTIEzYwFF9bPL8TSkhRpI1"
-access_token = "710828734228471808-bBWduho6oNWzvjtvtm1YlKkcFxmwLgD"
-access_token_secret = "enkBS23PiSMI9cl5HSxh7Ovf8GrJlYdwdRL23TcdLGuE2"
+consumer_key = "XXXX"
+consumer_secret = "XXXX"
+access_token = "XXXX"
+access_token_secret = "XXXX"
+# Enter your API keys in the above four variables.
 
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
